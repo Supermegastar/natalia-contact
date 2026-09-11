@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0c0c0c" />
+  <meta name="description" content="Наталья Старкова — контакты" />
+  <title>Наталья Старкова — HTL</title>
+  <style>
+    :root{
+      --black:#0d0d0d;
+      --ink:#161616;
+      --muted:#777;
+      --line:#dedede;
+      --soft:#f3f3f1;
+      --white:#fff;
+      --accent:#d8ff00;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:var(--soft);
+      color:var(--ink);
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit;text-decoration:none}
+    .page{
+      min-height:100svh;
+      max-width:560px;
+      margin:0 auto;
+      background:var(--white);
+      position:relative;
+      overflow:hidden;
+    }
+    .top{
+      background:var(--black);
+      color:#fff;
+      padding:22px 22px 28px;
+      position:relative;
+      overflow:hidden;
+    }
+    .top:after{
+      content:"";
+      position:absolute;
+      width:240px;height:240px;border-radius:50%;
+      right:-128px;top:-115px;
+      border:1px solid rgba(255,255,255,.16);
+      box-shadow:0 0 0 34px rgba(255,255,255,.03),0 0 0 68px rgba(255,255,255,.025);
+      pointer-events:none;
+    }
+    .brandrow{
+      display:flex;align-items:center;justify-content:space-between;
+      position:relative;z-index:2;
+    }
+    .logo{
+      font-weight:900;
+      letter-spacing:-2px;
+      font-size:28px;
+      line-height:1;
+    }
+    .logo span{color:var(--accent)}
+    .site-mini{
+      font-size:12px;
+      opacity:.68;
+      letter-spacing:.04em;
+    }
+    .hero{
+      padding-top:66px;
+      position:relative;z-index:2;
+    }
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:11px;text-transform:uppercase;
+      letter-spacing:.13em;color:#cfcfcf;
+    }
+    .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+    h1{
+      font-size:42px;
+      line-height:.98;
+      letter-spacing:-1.8px;
+      margin:18px 0 18px;
+      font-weight:500;
+    }
+    .subtitle{
+      margin:0;
+      font-size:16px;
+      line-height:1.45;
+      color:#bcbcbc;
+      max-width:380px;
+    }
+    .body{
+      padding:0 20px 28px;
+    }
+    .contact-card{
+      margin-top:0;
+      border-bottom:1px solid var(--line);
+    }
+    .contact-link{
+      display:grid;
+      grid-template-columns:42px 1fr 22px;
+      gap:12px;
+      align-items:center;
+      padding:21px 2px;
+      border-bottom:1px solid var(--line);
+    }
+    .contact-link:last-child{border-bottom:0}
+    .icon{
+      width:38px;height:38px;border-radius:50%;
+      border:1px solid #cfcfcf;
+      display:flex;align-items:center;justify-content:center;
+      font-size:17px;
+    }
+    .label{
+      display:block;color:var(--muted);
+      text-transform:uppercase;letter-spacing:.08em;
+      font-size:9px;margin-bottom:5px;
+    }
+    .value{
+      font-size:16px;
+      line-height:1.25;
+      word-break:break-word;
+    }
+    .arrow{
+      font-size:24px;
+      color:#8a8a8a;
+      transform:translateY(-1px);
+    }
+    .actions{
+      display:grid;
+      gap:10px;
+      padding:22px 0 6px;
+    }
+    .btn{
+      min-height:56px;
+      border-radius:2px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 18px;
+      font-size:14px;
+      font-weight:700;
+      letter-spacing:.01em;
+      transition:.18s ease;
+    }
+    .btn:active{transform:scale(.99)}
+    .btn-primary{
+      background:var(--black);color:#fff;
+    }
+    .btn-primary .plus{
+      background:var(--accent);color:#000;
+      width:28px;height:28px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      font-size:21px;font-weight:400;
+    }
+    .btn-secondary{
+      border:1px solid #cfcfcf;background:#fff;
+    }
+    .about{
+      margin-top:24px;
+      background:var(--soft);
+      padding:20px;
+    }
+    .about .kicker{
+      font-size:10px;letter-spacing:.12em;
+      text-transform:uppercase;color:#777;
+      margin-bottom:12px;
+    }
+    .about p{
+      margin:0;
+      font-size:18px;
+      line-height:1.35;
+      letter-spacing:-.2px;
+    }
+    footer{
+      padding:30px 0 4px;
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-end;
+      gap:16px;
+      color:#7b7b7b;
+      font-size:10px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+    footer .mark{
+      color:#161616;
+      font-size:20px;
+      font-weight:900;
+      letter-spacing:-1px;
+    }
+    @media (min-width:700px){
+      body{padding:24px 0}
+      .page{box-shadow:0 20px 70px rgba(0,0,0,.12)}
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="top">
+      <div class="brandrow">
+        <a class="logo" href="https://h-t-l.one/" target="_blank" rel="noopener">H<span>T</span>L</a>
+        <a class="site-mini" href="https://h-t-l.one/" target="_blank" rel="noopener">h-t-l.one ↗</a>
+      </div>
+
+      <div class="hero">
+        <div class="eyebrow"><span class="dot"></span> контакты</div>
+        <h1>Наталья<br>Старкова</h1>
+        <p class="subtitle">Буду рада знакомству и сотрудничеству</p>
+      </div>
+    </section>
+
+    <section class="body">
+      <div class="contact-card">
+        <a class="contact-link" href="tel:+79673377718">
+          <span class="icon">☎</span>
+          <span><span class="label">Телефон</span><span class="value">+7 967 337-77-18</span></span>
+          <span class="arrow">›</span>
+        </a>
+
+        <a class="contact-link" href="mailto:n.generalova@h-t-l.ru">
+          <span class="icon">✉</span>
+          <span><span class="label">Email</span><span class="value">n.generalova@h-t-l.ru</span></span>
+          <span class="arrow">›</span>
+        </a>
+
+        <a class="contact-link" href="https://h-t-l.one/" target="_blank" rel="noopener">
+          <span class="icon">◎</span>
+          <span><span class="label">Сайт</span><span class="value">h-t-l.one</span></span>
+          <span class="arrow">›</span>
+        </a>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="contact.vcf" download>
+          <span>Добавить контакт</span><span class="plus">+</span>
+        </a>
+        <a class="btn btn-secondary" href="https://h-t-l.one/" target="_blank" rel="noopener">
+          <span>Открыть сайт HTL</span><span>↗</span>
+        </a>
+      </div>
+
+      <div class="about">
+        <div class="kicker">HTL</div>
+        <p>Светотехнические решения, в которых технологии, дизайн и качество работают вместе.</p>
+      </div>
+
+      <footer>
+        <div>Наталья Старкова<br>электронная визитка</div>
+        <div class="mark">HTL</div>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
